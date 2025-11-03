@@ -1,0 +1,656 @@
+/* Добавьте эти стили в существующий CSS */
+
+/* Центрирование всех секций */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center; /* Добавляем центрирование текста */
+}
+
+/* Центрирование заголовков */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1E293B;
+    width: 100%;
+}
+
+/* Центрирование карточек услуг */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center; /* Центрируем карточки */
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center; /* Центрируем текст внутри */
+    max-width: 350px; /* Ограничиваем ширину */
+    width: 100%;
+}
+
+/* Центрирование преимуществ */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    max-width: 280px;
+    width: 100%;
+}
+
+/* Центрирование портфолио */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.portfolio-item {
+    background: #F8FAFC;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Центрирование процесса работы */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    max-width: 280px;
+    width: 100%;
+}
+
+/* Центрирование контактной формы */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form {
+    background: #F8FAFC;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Центрирование кнопок */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: #2563EB;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+    text-align: center;
+}
+
+/* Центрирование навигации */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center; /* Центрируем пункты меню */
+}
+
+/* Центрирование контактной информации */
+.contact-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    justify-content: center; /* Центрируем контакты */
+    text-align: left;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Адаптивные стили для всех устройств */
+
+/* 1. Базовые настройки адаптивности */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #1E293B;
+    background-color: #F8FAFC;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 2. Адаптивная шапка */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    min-height: 70px;
+}
+
+.logo {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-weight: bold;
+    color: #2563EB;
+    text-decoration: none;
+}
+
+/* Мобильное меню */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    padding: 5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1E293B;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #2563EB;
+}
+
+/* 3. Адаптивная главная секция */
+.hero {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    color: white;
+    padding: clamp(100px, 15vw, 150px) 0 clamp(60px, 10vw, 100px);
+    text-align: center;
+    margin-top: 70px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: clamp(10px, 3vw, 12px) clamp(20px, 4vw, 30px);
+    background: white;
+    color: #2563EB;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    min-width: 140px;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #2563EB;
+}
+
+/* 4. Адаптивные карточки */
+.features-grid,
+.services-grid,
+.portfolio-grid {
+    display: grid;
+    gap: clamp(1rem, 3vw, 2rem);
+    margin: 0 auto;
+}
+
+.features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+}
+
+.services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1200px;
+}
+
+.portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px;
+}
+
+.feature-card,
+.service-card,
+.portfolio-item {
+    background: white;
+    padding: clamp(1.5rem, 4vw, 2rem);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* 5. Адаптивные секции */
+section {
+    padding: clamp(40px, 10vw, 80px) 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+    color: #1E293B;
+    line-height: 1.2;
+}
+
+/* 6. Адаптивный процесс работы */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    text-align: center;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.step-number {
+    width: clamp(40px, 8vw, 60px);
+    height: clamp(40px, 8vw, 60px);
+    background: #2563EB;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: bold;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+/* 7. Адаптивные контакты */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 5vw, 3rem);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background: #F8FAFC;
+    padding: clamp(1.5rem, 4vw, 2rem);
+    border-radius: 12px;
+    order: 2;
+}
+
+.contact-info {
+    padding: clamp(1.5rem, 4vw, 2rem);
+    order: 1;
+}
+
+.form-group {
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: clamp(10px, 2vw, 12px);
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563EB;
+}
+
+.form-group textarea {
+    height: clamp(100px, 25vw, 120px);
+    resize: vertical;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    padding: clamp(0.8rem, 2vw, 1rem);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.contact-method .icon {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-right: 1rem;
+    color: #2563EB;
+}
+
+/* 8. Адаптивный футер */
+footer {
+    background: #1E293B;
+    color: white;
+    text-align: center;
+    padding: clamp(1.5rem, 4vw, 2rem) 0;
+}
+
+/* 9. Медиа-запросы для конкретных разрешений */
+
+/* Планшеты (768px и меньше) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+    
+    .contact-method {
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+/* Большие планшеты (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-form {
+        order: 1;
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+}
+
+/* Десктоп (1025px и больше) */
+@media (min-width: 1025px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-form {
+        order: 1;
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+}
+
+/* Очень маленькие телефоны (480px и меньше) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .feature-card,
+    .service-card,
+    .portfolio-item {
+        padding: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Портретная ориентация */
+@media (orientation: portrait) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Ландшафтная ориентация */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        padding: 80px 0 40px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Высокопиксельные экраны (2x и больше) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .feature-card,
+    .service-card,
+    .portfolio-item {
+        border: 0.5px solid #F1F5F9;
+    }
+}
+
+/* 10. Улучшения для доступности */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Темная тема (опционально) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #0F172A;
+        color: #F1F5F9;
+    }
+    
+    .feature-card,
+    .service-card,
+    .portfolio-item,
+    .contact-form {
+        background: #1E293B;
+        color: #F1F5F9;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        background: #334155;
+        border-color: #475569;
+        color: #F1F5F9;
+    }
+}
+
+/* 11. Адаптивные изображения */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio-image {
+    height: clamp(150px, 30vw, 200px);
+    background: #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+/* 12. Адаптивная типографика */
+p, li, span {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+/* 13. Плавные анимации для производительности */
+.feature-card,
+.service-card,
+.portfolio-item,
+.btn {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* 14. Поддержка касаний */
+@media (hover: none) and (pointer: coarse) {
+    .feature-card:hover,
+    .service-card:hover,
+    .portfolio-item:hover,
+    .btn:hover {
+        transform: none;
+    }
+    
+    .nav-links a:hover {
+        color: inherit;
+    }
+}
